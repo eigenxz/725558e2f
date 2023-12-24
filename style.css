@@ -82,3 +82,21 @@ h1 {
     transform: translateY(100vh) rotate(360deg);
   }
 }
+
+@media (max-width: 500px) {
+  .globe {
+    width: 80%;
+  }
+
+  .snowman {
+    font-size: 10rem;
+  }
+
+  section {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
