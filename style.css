@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --snow: #f5f5f5;
+  --dark: #0a0908;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--dark);
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.sect-content {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Title */
+
+h1 {
+  font-size: 3rem;
+  background: #cf1fc3;
+  background: linear-gradient(to right, #cf1fc3 0%, #cf1512 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Scene */
+
+.globe {
+  border: solid 1px var(--snow);
+  border-bottom: solid 2rem var(--snow);
+  border-radius: 50% 50% 0 0;
+  width: 50%;
+  aspect-ratio: 1/1;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  overflow: hidden;
+  position: relative;
+}
+
+.snowman {
+  font-size: 15rem;
+  margin: 0;
+}
+
+/* Animation */
+
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: falling linear infinite;
+}
+
+@keyframes falling {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
